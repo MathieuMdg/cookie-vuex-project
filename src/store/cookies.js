@@ -1,4 +1,7 @@
 export const cookie = {
+
+    namespaced: true,
+
     state () {
     return {
       cookies: 0
@@ -18,7 +21,7 @@ export const cookie = {
   actions: {
     async ajouterCookieAvecDelai (context, delai) {
         setTimeout(() => {
-        this.commit('ajouterCookie');
+        this.commit('cookie/ajouterCookie');
         }, delai * 1000);
     }
   }
