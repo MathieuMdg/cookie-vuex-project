@@ -2,7 +2,7 @@
   <div>
     <p>Nombre de cookies : {{ $store.state.cookie }}</p>
 
-    <button @click="$store.commit('cookie/ajouterCookie')">
+    <button @click="$store.commit('cookie/ajouterCookie', 1)">
       Ajouter un cookie
     </button>
 

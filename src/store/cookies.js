@@ -13,15 +13,15 @@ export const cookie = {
   },
 
   mutations: {
-    ajouterCookie (state) {
-      state.cookies++
+    ajouterCookie (state, nbre) {
+      state.cookies += nbre
     },
   },
 
   actions: {
-    async ajouterCookieAvecDelai (context, delai) {
+    async ajouterCookieAvecDelai ({ commit }, delai) {
         setTimeout(() => {
-        this.commit('cookie/ajouterCookie');
+        this.commit('cookie/ajouterCookie', 1);
         }, delai * 1000);
     }
   }

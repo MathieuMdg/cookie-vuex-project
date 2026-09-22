@@ -9,10 +9,8 @@ export const store = createStore({
   },
 
   actions: {
-    async ajouterAutoProduction() {
-        setTimeout(() => {
-        this.commit('cookie/ajouterCookie');
-        }, 1000);
+    ajouterAutoProduction({ commit, state }) {
+      setInterval(() => {commit('cookie/ajouterCookie',state.autoProduction.autoProduction)}, 10000)
     }
   }
 })
