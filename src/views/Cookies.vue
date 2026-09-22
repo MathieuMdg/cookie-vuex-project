@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Nombre de cookies : {{ $store.state.cookies }}</p>
+    <p>Nombre de cookies : {{ $store.state.cookie }}</p>
 
     <button @click="$store.commit('ajouterCookie')">
       Ajouter un cookie
